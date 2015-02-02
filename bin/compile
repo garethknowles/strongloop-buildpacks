@@ -75,7 +75,6 @@ status "Pruning unused dependencies"
 npm prune 2>&1 | indent
 
 status "Caching node_modules directory for future builds"
-rm -rf $cache_dir
 mkdir -p $cache_dir
 test -d $build_dir/node_modules && cp -r $build_dir/node_modules $cache_dir/
 
